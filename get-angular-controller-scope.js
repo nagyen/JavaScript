@@ -1,7 +1,7 @@
 //function to get scope of any angular controller
 function getCntrlScope(cntrlName){
   //find the cntrl and return its scope
-  var $scope = angular.element("[ng-controller=" + "cntrlName" + "]").scope();
+  var $scope = angular.element("[ng-controller=" + cntrlName + "]").scope();
   return $scope;
 }
 
@@ -9,7 +9,7 @@ function getCntrlScope(cntrlName){
 //for example lets consider data-distinct-attr as an unique attribute for every controller
 function getDistinctCntrlScope(cntrlName, attrValue){
   //find the cntrl with given attr
-  var $scope = angular.element("[ng-controller=" + "cntrlName" + "][data-distinct-attr=" +attrValue+"]").scope();
+  var $scope = angular.element("[ng-controller=" + cntrlName + "][data-distinct-attr=" + attrValue + "]").scope();
   return $scope;
 }
 
